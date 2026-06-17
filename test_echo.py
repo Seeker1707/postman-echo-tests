@@ -18,7 +18,7 @@ def test_get_with_params():
     response = requests.get(f"{BASE_URL}/get", params=params)
     assert response.status_code == 200
     data = response.json()
-    assert data["args"] == params
+    assert data["args"] == {"wrong": "value"}
 
 
 def test_post_form_data():
